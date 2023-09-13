@@ -25,7 +25,7 @@ return {
     "Next buffer" },
 
     -- diabled mappings
-    ["<leader>q"] = false,
+    ["<leader>q"] = {":lua require'jester'.run_file()<Enter>",desc = 'Run Jest'},
     ["]b"] = false
   },
 }
