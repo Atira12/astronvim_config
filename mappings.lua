@@ -24,8 +24,9 @@ return {
     ["<leader><Tab>"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc =
     "Next buffer" },
 
+    ["<leader>z"] = { ":ZenMode<Enter>", desc = 'Run Jest' },
     -- diabled mappings
-    ["<leader>q"] = {":lua require'jester'.run_file()<Enter>",desc = 'Run Jest'},
+    ["<leader>q"] = { ":lua require'jester'.run_file()<Enter>", desc = 'Run Jest' },
     ["]b"] = false
   },
 }
