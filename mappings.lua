@@ -27,6 +27,12 @@ return {
     ["<leader>z"] = { ":ZenMode<Enter>", desc = 'Run Jest' },
     -- diabled mappings
     ["<leader>q"] = { ":lua require'jester'.run_file()<Enter>", desc = 'Run Jest' },
+
+    -- case mappings
+    ["ga."] = { "<cmd>TextCaseOpenTelescope<CR>", desc = "To Pascal Case"},
     ["]b"] = false
   },
-}
+  v = {
+    ["ga."] = { "<cmd>TextCaseOpenTelescope<CR>", desc = "To Pascal Case"},
+  }
+  }
