@@ -29,10 +29,11 @@ return {
     ["<leader>q"] = { ":lua require'jester'.run_file()<Enter>", desc = 'Run Jest' },
 
     -- case mappings
-    ["ga."] = { "<cmd>TextCaseOpenTelescope<CR>", desc = "To Pascal Case"},
+    ["ga."] = { "<cmd>TextCaseOpenTelescope<CR>", desc = "To Pascal Case" },
+    ["<leader>:"] = { function() require("vim.diagnostic").open_float(0, { scope = "line" }) end, desc = "Details Errors" },
     ["]b"] = false
   },
   v = {
-    ["ga."] = { "<cmd>TextCaseOpenTelescope<CR>", desc = "To Pascal Case"},
+    ["ga."] = { "<cmd>TextCaseOpenTelescope<CR>", desc = "To Pascal Case" },
   }
-  }
+}
