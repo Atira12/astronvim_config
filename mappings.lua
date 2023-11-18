@@ -21,12 +21,16 @@ return {
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     ["<leader>b"] = { name = "Buffers" },
-    ["<leader><Tab>"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc =
-    "Next buffer" },
+    ["<leader><Tab>"] = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc =
+      "Next buffer"
+    },
 
-    ["<leader>z"] = { ":ZenMode<Enter>", desc = 'Run Jest' },
+    ["<leader>z"] = { ":ZenMode<Enter>", desc = 'Zen Mode' },
     -- diabled mappings
-    ["<leader>q"] = { ":lua require'jester'.run_file()<Enter>", desc = 'Run Jest' },
+    ["<leader>q"] = { ":lua require'jester'.run_file()<Enter>", desc = 'Run Jest file' },
+    ["<leader>Q"] = { ":lua require'jester'.run()<Enter>", desc = 'Run nearest Jest test' },
 
     -- case mappings
     ["ga."] = { "<cmd>TextCaseOpenTelescope<CR>", desc = "To Pascal Case" },
